@@ -60,12 +60,19 @@ const initApp = () => {
         console.log("clicked");
     });
 
+    // if (btnDarkMode.innerHTML === '<i class="fas fa-moon"></i>') {
+    //     btnContact.style.backgroundColor = "black";
+    // }
+    // else if (btnDarkMode.innerHTML === '<i class="fas fa-sun text-orange-500 bg-white"></i>') {
+    //     btnContact.style.backgroundColor = "white";
+    // }
+
     btnDarkMode.addEventListener("click", () => {
         if (btnDarkMode.innerHTML === '<i class="fas fa-moon"></i>') {
+            // btnContact.style.backgroundColor = "white";
             btnDarkMode.innerHTML = '<i class="fas fa-sun text-orange-500 bg-white"></i>';
             btnDarkMode.style.borderColor = "orange";
             btnDarkMode.style.backgroundColor = "white";
-            btnContact.style.backgroundColor = "white";
             input.forEach(input => {
                 input.style.borderColor = "black";
                 input.style.color = "black";
@@ -79,7 +86,6 @@ const initApp = () => {
         else {
             btnDarkMode.innerHTML = `<i class='fas fa-moon'></i>`;
             btnDarkMode.style.borderColor = "rgb(158 158 158)";
-            btnContact.style.backgroundColor = "black";
             input.forEach(input => {
                 input.style.borderColor = "white";
                 input.style.color = "white";
